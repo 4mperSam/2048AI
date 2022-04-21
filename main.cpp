@@ -1,7 +1,23 @@
 #include <iostream>
 #include <string> 
 using namespace std;
-
+//globals
+int sq1 = 0;
+int sq2 = 0;
+int sq3 = 0;
+int sq4 = 0;
+int sq5 = 0;
+int sq6 = 0;
+int sq7 = 0;
+int sq8 = 0;
+int sq9 = 0;
+int sq10 = 0;
+int sq11 = 0;
+int sq12 = 0;
+int sq13 = 0;
+int sq14 = 0;
+int sq15 = 0;
+int sq16 = 0;
 //draw the board to the screen for the console.
 void drawBoard(int sq1, int sq2, int sq3, int sq4, int sq5, int sq6, int sq7, int sq8, int sq9, int sq10, int sq11, int sq12, int sq13, int sq14, int sq15, int sq16) {
     //change all values into strings
@@ -218,12 +234,23 @@ void drawBoard(int sq1, int sq2, int sq3, int sq4, int sq5, int sq6, int sq7, in
     cout << "+---++---++---++---+\n";
 }
 
+void inputW(int sq1, int sq2, int sq3, int sq4, int sq5, int sq6, int sq7, int sq8, int sq9, int sq10, int sq11, int sq12, int sq13, int sq14, int sq15, int sq16){
+  sq1=2;
+  
+}
+
 int main() {
-    //draw the board with the specified values
-    bool running = true;
-    char inp;
-    while (running == true){
-        drawBoard(100, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
-        cin >> inp;
+  //draw the board with the specified values
+  bool running = true;
+  char inp;
+  //game loop
+  while (running == true){
+    //run the draw board function
+    drawBoard(sq1, sq2, sq3, sq4, sq5, sq6, sq7, sq8, sq9, sq10, sq11, sq12, sq13, sq14, sq15, sq16);
+    //take input and compile it
+    cin >> inp;
+    if (inp == 'w'){
+      inputW(sq1, sq2, sq3, sq4, sq5, sq6, sq7, sq8, sq9, sq10, sq11, sq12, sq13, sq14, sq15, sq16);
     }
+  }
 }
